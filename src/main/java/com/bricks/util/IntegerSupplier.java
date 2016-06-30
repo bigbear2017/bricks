@@ -9,7 +9,6 @@ import java.util.function.Supplier;
  */
 public class IntegerSupplier implements Supplier<Integer> {
   private int value = 0;
-  @Override
   public Integer get() {
     return value++;
   }
