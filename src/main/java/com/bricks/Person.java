@@ -171,15 +171,14 @@ interface CheckPerson {
   boolean test(Person p);
 }
 
-
-interface Predicate<T> {
-  boolean test(T t);
-}
-
 class CheckPersonEligibleForSelectiveService implements CheckPerson {
   public boolean test(Person p) {
     return p.gender == Person.Sex.MALE &&
             p.getAge() >= 18 &&
             p.getAge() <= 25;
   }
+}
+
+interface Predicate<T> {
+  boolean test(T t);
 }
